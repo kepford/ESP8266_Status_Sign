@@ -150,27 +150,27 @@ void loop(){
             // If the output5State is off, it displays the ON button
             if (output5State == 0) {
             client.println("<p>Blue/Meeting: GPIO 5 - State Off</p>");
-              client.println("<p><a href=\"/5\"><button class=\"button\">ON</button></a></p>");
+              client.println("<p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>");
             } else {
-              client.println("<p>GPIO 5 - State On</p>");
-              client.println("<p><a href=\"/5\"><button class=\"button button2\">OFF</button></a></p>");
+              client.println("<p>Blue/Meeting: GPIO 5 - State On</p>");
+              client.println("<p><a href=\"/5/off\"><button class=\"button button2\">OFF</button></a></p>");
             }
 
             // If the output4State is off, it displays the ON button
             if (output4State == 0) {
               client.println("<p>Red/Video: GPIO 4 - State Off</p>");
-              client.println("<p><a href=\"/4\"><button class=\"button\">ON</button></a></p>");
+              client.println("<p><a href=\"/4/on\"><button class=\"button\">ON</button></a></p>");
             } else {
-              client.println("<p>GPIO 4 - State On</p>");
-              client.println("<p><a href=\"/4\"><button class=\"button button2\">OFF</button></a></p>");
+              client.println("<p>Red/Video: GPIO 4 - State On</p>");
+              client.println("<p><a href=\"/4/off\"><button class=\"button button2\">OFF</button></a></p>");
             }
 
             if (output0State == 0) {
-            client.println("<p>Green/Streaming: GPIO 0 - State Off</p>");
-              client.println("<p><a href=\"/0\"><button class=\"button\">ON</button></a></p>");
+            client.println("<p>Yellow/Streaming: GPIO 0 - State Off</p>");
+              client.println("<p><a href=\"/0/on\"><button class=\"button\">ON</button></a></p>");
             } else {
-              client.println("<p>GPIO 0 - State On</p>");
-              client.println("<p><a href=\"/0\"><button class=\"button button2\">OFF</button></a></p>");
+              client.println("<p>Yellow/Streaming: GPIO 0 - State On</p>");
+              client.println("<p><a href=\"/0/off\"><button class=\"button button2\">OFF</button></a></p>");
             }
 
 
