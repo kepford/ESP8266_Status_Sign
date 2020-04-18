@@ -1,13 +1,13 @@
 #include <Arduino.h>
 
-// Load Wi-Fi library
-#include <ESP8266WiFi.h>
-// Fancy .local domain
-#include <ESP8266mDNS.h>
+// Based on design from https://randomnerdtutorials.com/esp8266-web-server/
 
-// Replace with your network credentials
-const char* ssid     = "SSID";
-const char* password = "xxxxxxxxxxxxxxxx";
+#include <ESP8266WiFi.h>
+#include <ESP8266mDNS.h>
+#include "secrets.h"
+// Create a secrets.h file with the following.
+// const char* ssid     = "SSID";
+// const char* password = "PASSWORD";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -139,7 +139,6 @@ void loop(){
             client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
             client.println("<link rel=\"icon\" href=\"data:,\">");
             // CSS to style the on/off buttons
-            // Feel free to change the background-color and font-size attributes to fit your preferences
             client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}");
             client.println(".button { background-color: #195B6A; border: none; color: white; padding: 16px 40px;");
             client.println("text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
