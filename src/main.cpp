@@ -131,7 +131,7 @@ void loop(){
             else if (header.indexOf("GET /0/off") >= 0) {
               Serial.println("GPIO 0 off");
               digitalWrite(output0, LOW);
-              output0State = digitalRead(output4);
+              output0State = digitalRead(output0);
             }
 
             // Display the HTML web page
