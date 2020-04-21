@@ -145,7 +145,7 @@ void loop(){
             client.println(".button2 {background-color: #77878A;}</style></head>");
 
             // Web Page Heading
-            client.println("<body><h1>Meeting Sign</h1>");
+            client.println("<body><h1><a href=\"/\">Meeting Sign</a></h1>");
             // If the output5State is off, it displays the ON button
             if (output5State == 0) {
             client.println("<p>Blue/Meeting: GPIO 5 - State Off</p>");
